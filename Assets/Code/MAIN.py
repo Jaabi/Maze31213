@@ -11,6 +11,8 @@ Follows the example of the IDEA/ALTER game framework by Andy Harris in the book 
 @author: Us
 '''
 
+#HAHAHAHAHAHAHAHAHAHAHAHAHAHA I FINALLY GOT THIS TO WORK CORRECTLY! YEYEYEYEYEYEYEYEYEYEYEYEYEY~~~~~~~~~!@!!!!!!!!!!!!!!
+
 #I - Import and Initialize
 import pygame
 pygame.init()
