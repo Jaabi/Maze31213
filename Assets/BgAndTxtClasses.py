@@ -18,4 +18,11 @@ class BackgroundSprite(pygame.sprite.Sprite):
         Constructor
         '''
         pygame.sprite.Sprite.__init__(self)
-        
+        self.image = pygame.image.load("Images\Background.png")
+        self.image = self.image.convert()
+        self.rect = self.image.get_rect()
+        #Ensure that the background gets fully shown
+        self.rect.topleft = (0,0)
+    
+    def update(self):
+        pass

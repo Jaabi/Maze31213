@@ -25,14 +25,13 @@ def main():
     screen = pygame.display.set_mode((640, 480))
     pygame.display.set_caption("Maze 31213")
     
-    #E - Entities
-        #All the sprites, but I think they'll go in their own module
-        #background for now
-    background = pygame.Surface(screen.get_size())
-    background = background.convert()
-    background.fill((0, 255, 255))
+    #E - Entities (all sprites will be in their respective modules, 
+        # being brought in through imports)
+        
         #Getting ready for a fully-implemented BackgroundSprite class
-    bgSprite = BgAndTxtClasses.BackgroundSprite
+    bgSprite = BgAndTxtClasses.BackgroundSprite()
+    
+    allSprites = pygame.sprite.Group(bgSprite)
     
     #A - Action (broken into ALTER steps)
     
@@ -51,8 +50,10 @@ def main():
                 keepGoing = False
         
         #R - Refresh display
-        #This is needed for now, but it will be unnecessary once a sprite is implemented for the background
-        screen.blit(background, (0, 0))
+        
+        allSprites.update()
+        allSprites.draw(screen)
+        
         pygame.display.flip()
 
     #All sprites are now being destroyed or have already been destroyed. Yay~
