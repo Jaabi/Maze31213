@@ -26,3 +26,16 @@ class BackgroundSprite(pygame.sprite.Sprite):
     
     def update(self):
         pass
+
+#To be finished at a later date
+#class Text(pygame.sprite.Sprite):
+#    '''
+#    classdocs
+#    '''
+#
+#    def __init__(self):
+#        '''
+#        Constructor
+#        '''
+#        pygame.sprite.Sprite.__init__(self)
+        

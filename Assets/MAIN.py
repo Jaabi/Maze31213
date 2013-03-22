@@ -14,7 +14,7 @@ Follows the example of the IDEA/ALTER game framework by Andy Harris in the book 
 #HAHAHAHAHAHAHAHAHAHAHAHAHAHA I FINALLY GOT THIS TO WORK CORRECTLY! YEYEYEYEYEYEYEYEYEYEYEYEYEY~~~~~~~~~!@!!!!!!!!!!!!!!
         
 #I - Import and Initialize
-import pygame, BgAndTxtClasses
+import pygame, BgAndTxtClasses, PlayerClass
 pygame.init()
 
 
@@ -30,8 +30,11 @@ def main():
         
         #Getting ready for a fully-implemented BackgroundSprite class
     bgSprite = BgAndTxtClasses.BackgroundSprite()
+        #Will move these objects to a CONTROL object that will be responsible
+        # for all interactions, except for some specific things
+    player = PlayerClass.Player()
     
-    allSprites = pygame.sprite.Group(bgSprite)
+    allSprites = pygame.sprite.OrderedUpdates(bgSprite, player)
     
     #A - Action (broken into ALTER steps)
     
